@@ -14,5 +14,25 @@
         <p>HTML IS Cool</p>
         <img src="https://cdn-useast1.kapwing.com/static/templates/knee-surgery-tomorrow-meme-template-KAI3QQ5SCkNXSKMs-full.jpg">
         <blockquote>The human mind was forged in the crucible of coalitional conflict</blockquote>
+        <blockquote>Woohoo</blockquote>
+        <button onclick="changeQuote()">
+
+        </button>
+        <script>
+            let index = 0;
+            function changeQuote() {
+                let quotes = [
+                    `"Backticks" - Dave`,
+                    `"" - Tree`,
+                    `"Banana Banana Banana Banana Terracotta Banana Terracotta Terracotta Pie" - Serj Tankian`,
+                    `"Dumptrucks!" - Dave's son`,
+                    `"The human mind was forged in the crucible of coalitional conflict" - Everyone`
+                ];
+                index++
+                index%=quotes.length
+                let bq = document.querySelector("blockquote");
+                bq.innerHTML = quotes[index]
+            }
+        </script>
     </body>
 </html>
